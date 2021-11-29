@@ -1,7 +1,7 @@
 pandas
 streamlit
 plotly
-maltplotlib
+matplotlib
 numpy
 sklearn
 scipy
