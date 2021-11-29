@@ -1,0 +1,2 @@
+Ce dossier vide servira à accueillir les fichiers csv du projet, 
+fichiers qui seront téléchargés décompressés à partir du lien kaggle.

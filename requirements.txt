@@ -6,6 +6,5 @@ numpy
 sklearn
 scipy
 joblib
-patool
-pyunpack
+shutil
 six
