@@ -8,5 +8,4 @@ scipy
 joblib
 patool
 pyunpack
-wget
-urllib
+six
