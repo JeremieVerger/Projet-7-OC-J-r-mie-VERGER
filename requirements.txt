@@ -8,4 +8,4 @@ scipy
 joblib
 patool
 pyunpack
-urllib
+wget
