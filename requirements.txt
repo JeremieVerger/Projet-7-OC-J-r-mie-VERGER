@@ -6,5 +6,5 @@ numpy
 sklearn
 scipy
 joblib
-shutil
+patool
 six
