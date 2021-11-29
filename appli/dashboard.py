@@ -1,11 +1,10 @@
 # voici le code permettant de générer le Dashboard via Streamlit
 
-# mise en place de l'envirronement Python
+# mise en place de l'environnement Python
 
 import pandas as pd
 import streamlit as st
 import sys
-sys.path.insert(0, 'API')
 import pipeline
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt

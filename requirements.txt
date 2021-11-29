@@ -1,6 +1,5 @@
 pandas
 streamlit
-sys
 plotly
 maltplotlib
 numpy

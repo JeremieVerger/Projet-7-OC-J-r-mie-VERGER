@@ -388,7 +388,7 @@ def predict(arg):
     X = std_scale.transform(X)
     
     # on importe le modèle
-    model = joblib.load('./API/P7_model.pkl') 
+    model = joblib.load('./P7_model.pkl') 
     
     # on effectue nos prédictions
     y_pred = model.predict(X)

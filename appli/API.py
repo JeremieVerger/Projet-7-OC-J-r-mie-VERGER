@@ -4,8 +4,6 @@
 
 import pandas as pd
 import streamlit as st
-import sys
-sys.path.insert(0, 'API')
 import pipeline
 
 # chargement des données via le pipeline
