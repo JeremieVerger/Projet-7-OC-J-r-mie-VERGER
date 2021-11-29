@@ -9,14 +9,14 @@ from sklearn import manifold, decomposition
 from sklearn import preprocessing
 import joblib
 from sklearn import linear_model
-import zipfile as zf
+from pyunpack import Archive
 import urllib.request
 
 # on récupère puis décompresse les fichiers CSV contenant les données
 urllib.request.urlretrieve('https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/Parcours_data_scientist/Projet+-+Impl%C3%A9menter+un+mod%C3%A8le+de+scoring/Projet+Mise+en+prod+-+home-credit-default-risk.zip', "Data.zip")
-files = zf.ZipFile("Data.zip",'r')
+files = Archive("Data.zip",'r')
 files.extractall("P7_data")
-files.close()
+
 
 # création d'une fonction de détection des valeurs manquantes
 
