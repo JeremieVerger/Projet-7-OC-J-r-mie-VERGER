@@ -6,6 +6,6 @@ numpy
 sklearn
 scipy
 joblib
-patools
+patool
 pyunpack
 urllib
