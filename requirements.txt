@@ -1,0 +1,11 @@
+pandas
+streamlit
+sys
+plotly
+maltplotlib
+numpy
+sklearn
+scipy
+joblib
+zipfile
+urllib
