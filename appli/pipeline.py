@@ -18,7 +18,7 @@ def is_nan(x):
 # Ces premières fonctions importent les données brutes et en fond une première sélection de variables
 
 def application_test():
-    appli_test = pd.read_csv('./P7_data/application_test.csv', sep = ',')
+    appli_test = pd.read_csv('./appli/P7_data/application_test.csv', sep = ',')
     #on sélectionne les variables pertinentes
     colonnes_test = ["SK_ID_CURR","NAME_CONTRACT_TYPE","CODE_GENDER","FLAG_OWN_CAR","FLAG_OWN_REALTY",
                 "CNT_CHILDREN","AMT_INCOME_TOTAL","AMT_CREDIT","AMT_ANNUITY",
@@ -29,7 +29,7 @@ def application_test():
     return appli_test
 
 def application_train():
-    appli_train = pd.read_csv('./P7_data/application_train.csv', sep = ',')
+    appli_train = pd.read_csv('./appli/P7_data/application_train.csv', sep = ',')
      #on sélectionne les variables pertinentes
     colonnes_train = ["SK_ID_CURR","NAME_CONTRACT_TYPE","CODE_GENDER","FLAG_OWN_CAR","FLAG_OWN_REALTY",
                 "CNT_CHILDREN","AMT_INCOME_TOTAL","AMT_CREDIT","AMT_ANNUITY",
@@ -40,7 +40,7 @@ def application_train():
     return appli_train
 
 def bureau():
-    bureau = pd.read_csv('./P7_data/bureau.csv', sep = ',')
+    bureau = pd.read_csv('./appli/P7_data/bureau.csv', sep = ',')
     # sélection des variables pertinentes
     colonnes = ["SK_ID_CURR","SK_ID_BUREAU","CREDIT_ACTIVE","CREDIT_DAY_OVERDUE","DAYS_CREDIT_ENDDATE",
            "AMT_CREDIT_MAX_OVERDUE","AMT_CREDIT_SUM_DEBT","AMT_CREDIT_SUM_OVERDUE",
@@ -49,7 +49,7 @@ def bureau():
     return bureau
 
 def credit_card():
-    credit_card = pd.read_csv('./P7_data/credit_card_balance.csv', sep = ',')
+    credit_card = pd.read_csv('./appli/P7_data/credit_card_balance.csv', sep = ',')
     # sélection des variables pertinentes 
     colonnes = ["SK_ID_PREV","SK_ID_CURR","AMT_BALANCE","AMT_DRAWINGS_CURRENT"]
     credit_card = credit_card[colonnes]
@@ -61,7 +61,7 @@ def credit_card():
     return credit_card
 
 def installments():
-    installments = pd.read_csv('./P7_data/installments_payments.csv', sep = ',')
+    installments = pd.read_csv('./appli/P7_data/installments_payments.csv', sep = ',')
     # sélection des variables pertinentes
     colonnes = ["SK_ID_PREV","SK_ID_CURR","AMT_INSTALMENT","AMT_PAYMENT"]
     installments = installments[colonnes]
@@ -71,7 +71,7 @@ def installments():
     return installments
 
 def POS():
-    POS = pd.read_csv('./P7_data/POS_CASH_balance.csv', sep = ',')
+    POS = pd.read_csv('./appli/P7_data/POS_CASH_balance.csv', sep = ',')
     # sélection des variables pertinentes
     colonnes = ["SK_ID_PREV","SK_ID_CURR","CNT_INSTALMENT_FUTURE"]
     POS = POS[colonnes]
@@ -82,7 +82,7 @@ def POS():
     return POS
 
 def previous():
-    previous_appli = pd.read_csv('./P7_data/previous_application.csv', sep = ',')
+    previous_appli = pd.read_csv('./appli/P7_data/previous_application.csv', sep = ',')
     # sélection des variables pertinentes
     colonnes = ["SK_ID_PREV","SK_ID_CURR","NAME_CONTRACT_TYPE","AMT_CREDIT","NAME_CONTRACT_STATUS",
            "CODE_REJECT_REASON"]
@@ -380,7 +380,7 @@ def predict(arg):
     X = std_scale.transform(X)
     
     # on importe le modèle
-    model = joblib.load('./P7_model.pkl') 
+    model = joblib.load('./appli/P7_model.pkl') 
     
     # on effectue nos prédictions
     y_pred = model.predict(X)
