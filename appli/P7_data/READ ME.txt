@@ -1,2 +1,1 @@
-Ce dossier vide servira à accueillir les fichiers csv du projet, 
-fichiers qui seront téléchargés décompressés à partir du lien kaggle.
+Ce dossier contient les échantillons qui ont été générés à partir du notebook.

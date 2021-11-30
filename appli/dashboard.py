@@ -56,7 +56,6 @@ def load_data():
 # génération du dashboard
 
 st.title("Prêt à dépenser")
-st.text("Le chargement du tableau de bord peut prendre quelques minutes.")
 
 # on charge nos données
 data_train,data_test = load_data()
