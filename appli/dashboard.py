@@ -94,9 +94,9 @@ info = data_test[data_test['SK_ID_CURR']==identifiant_client][var].values
 text = var+' : '+str(info[0])
 st.text(text)
 
-# affichage d'un comparatif avec notre set d'entrainement
+# affichage d'un comparatif de nos résultats
 
-st.header("Comparaison avec notre base de données :")
+st.header("Comparaison notre base de données:")
 
 variables_num = ['AMT_INCOME_TOTAL','DAYS_EMPLOYED','AMT_CREDIT_ACTIVE','AGE']
 variables_cat = ['ORGANIZATION_TYPE','CODE_GENDER',"NAME_FAMILY_STATUS","NAME_HOUSING_TYPE","NAME_INCOME_TYPE",
@@ -105,9 +105,9 @@ variables_cat = ['ORGANIZATION_TYPE','CODE_GENDER',"NAME_FAMILY_STATUS","NAME_HO
 var_num = st.selectbox("Variable numérique",variables_num)
 
 colors = ['green','red']
-x = data_train[data_train["TARGET"]==0][var_num]
+x = data_test[data_test["Prédiction"]==0][var_num]
 x = x[~is_outlier(x)]
-y = data_train[data_train["TARGET"]==1][var_num]
+y = data_test[data_test["Prédiction"]==1][var_num]
 y = y[~is_outlier(y)]
 
 fig, ax = plt.subplots()
@@ -120,8 +120,8 @@ st.pyplot(fig)
 
 var_cat = st.selectbox("Variable catégorielle",variables_cat)
 
-x = data_train[data_train["TARGET"]==0][var_cat]
-y = data_train[data_train["TARGET"]==1][var_cat]
+x = data_test[data_test["Prédiction"]==0][var_cat]
+y = data_test[data_test["Prédiction"]==1][var_cat]
 
 fig = plt.figure(figsize = (10,4))
 ax = fig.add_subplot(1,2,(1))
@@ -134,5 +134,6 @@ client = data_test[data_test['SK_ID_CURR']==identifiant_client][var_cat].values
 text = var_cat+' : '+str(client[0])
 st.text(text)
 st.pyplot(fig)
+
 
 
