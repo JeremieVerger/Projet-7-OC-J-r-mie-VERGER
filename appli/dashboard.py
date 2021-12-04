@@ -96,7 +96,7 @@ st.text(text)
 
 # affichage d'un comparatif de nos résultats
 
-st.header("Comparaison notre base de données:")
+st.header("Comparaison avec notre base de données:")
 
 variables_num = ['AMT_INCOME_TOTAL','DAYS_EMPLOYED','AMT_CREDIT_ACTIVE','AGE']
 variables_cat = ['ORGANIZATION_TYPE','CODE_GENDER',"NAME_FAMILY_STATUS","NAME_HOUSING_TYPE","NAME_INCOME_TYPE",
