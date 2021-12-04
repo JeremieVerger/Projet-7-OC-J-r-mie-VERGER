@@ -1,1 +1,11 @@
 Ce dépôt contient les fichiers de travail du projet 7 du parcours Data Scientist d'OpenClassrooms. 
+
+Il contient un notebook qui a servi pour l'exploration des données, l'entraînement et l'optimisation du modèle, ainsi que l'échantillonage des donnes d'origine.
+Il contient également un fichier requirements.txt servant à déployer le dashobard avec le cloud Streamlit.
+
+Le dossier appli contient les fichiers nécessaires au déployement de cette application :
+les données échantillonnées dans le dossier P7_data,
+le fichier permettant de déployer l'API via streamlit,
+le fichier permettant de générer le dashboard via streamlit,
+le modèle entraîné,
+le pipeline. 
