@@ -47,11 +47,9 @@ def is_outlier(points, thresh=3.5):
 
 # on créé la fonction qui va lire nos données
 
-URL = 'https://share.streamlit.io/jeremieverger/projet-7-oc-j-r-mie-verger/main/appli/API.py'
-
 @st.cache(allow_output_mutation=True)
 def load_data():
-    data_test = read_json(URL)
+    data_test = pipeline.predict('test')
     return data_test
 
 # génération du dashboard
