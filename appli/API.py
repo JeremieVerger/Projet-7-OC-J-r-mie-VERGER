@@ -15,4 +15,4 @@ def load_data():
 
 # génération de l'API
 data_test = load_data()
-st.dataframe(data_test)
+st.json(data_test)
