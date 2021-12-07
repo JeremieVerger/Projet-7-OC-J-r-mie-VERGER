@@ -51,7 +51,7 @@ URL = 'https://share.streamlit.io/jeremieverger/projet-7-oc-j-r-mie-verger/main/
 
 @st.cache(allow_output_mutation=True)
 def load_data():
-    data_test = pd.read_json(URL)
+    data_test = read_json(URL)
     return data_test
 
 # génération du dashboard
