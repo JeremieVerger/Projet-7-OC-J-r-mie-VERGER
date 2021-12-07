@@ -15,4 +15,5 @@ def load_data():
 
 # génération de l'API
 data_test = load_data()
-st.json(data_test)
+js_test = data_test.to_json(orient = 'index')
+st.json(js_test)
