@@ -47,18 +47,21 @@ def is_outlier(points, thresh=3.5):
 
 # on créé la fonction qui va lire nos données
 
+URL = https://share.streamlit.io/jeremieverger/projet-7-oc-j-r-mie-verger/main/appli/API.py
+
 @st.cache(allow_output_mutation=True)
 def load_data():
-    data_train = pipeline.predict('train')
-    data_test = pipeline.predict('test')
-    return data_train,data_test
+    data_test = pd.read_json(URL)
+    return data_test
 
 # génération du dashboard
 
 st.title("Prêt à dépenser")
 
+st.text("Le chargement des données peut prendre quelques secondes.")
+
 # on charge nos données
-data_train,data_test = load_data()
+data_test = load_data()
 
 # on demande à l'utilisateur de sélectionner l'identifiant d'un client
 identifiant_client = st.selectbox("identifiant client",data_test['SK_ID_CURR'])
